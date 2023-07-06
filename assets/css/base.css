@@ -1,0 +1,105 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #fb5533;
+    --border-color: #d3d3d3;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid--white-bg{
+    background-color: #fff;
+    padding-bottom: 8px;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__body {
+    position: relative;
+    z-index: 10;
+    margin: auto;
+}
+    
+/* Buttton style */
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color:var(--text-color);
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn.btn--normal:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.btn--size-s{
+    height: 30px;
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+.btn.btn--primary{
+    color:#fff;
+    background-color: var(--primary-color);
+}
+.btn.btn--disabled{
+    cursor: default;
+    color: #ccc;
+    background-color: #999;
+}
